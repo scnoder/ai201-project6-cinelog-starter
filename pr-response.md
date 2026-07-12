@@ -18,14 +18,14 @@
 **How I verified:** Ran `pytest tests/test_watchlist.py -v` and `pytest tests/ -v`. All tests passed.
 
 ## Comment 4 — Default visibility
-**My position:**
-**Reasoning:**
-**Tradeoff acknowledged:**
+**My position:** CineLog should keep `public=False`.
+**Reasoning:** User privacy should always be the default. People may consider watchlsits to be personal and users can later choose what to share with others.
+**Tradeoff acknowledged:** This leads to less community discovery and the watchlist feature becomes less social.
 
 ## Comment 5 — Sort order
-**My position:**
-**Reasoning:**
-**Engagement with reviewer's point:**
+**My position:** The watchlist should be sorted in alphabetical order.
+**Reasoning:** This helps people who immediately adds movies they hear about and find interesting and the list becomes easier to scan and be predictable.
+**Engagement with reviewer's point:** Recently added movies are not highlighted.
 
 ## Comment 6 — Rebase
 **What conflicted:**
