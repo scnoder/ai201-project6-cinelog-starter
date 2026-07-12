@@ -4,8 +4,8 @@
 <!-- Fill in at the end — how you used AI tools during this project -->
 
 ## Comment 1 — Rename
-**What I did:**
-**How I verified:**
+**What I did:** I changed the function name from `save_to_watchlist()` to `add_to_watchlist()`.
+**How I verified:** I searched every instance of `save_to_watchlist()` and then changed the name and checked again to make sure that there are no more occurences of that name.
 
 ## Comment 2 — Deduplication
 **What I did:**
