@@ -8,8 +8,9 @@
 **How I verified:** I searched every instance of `save_to_watchlist()` and then changed the name and checked again to make sure that there are no more occurences of that name.
 
 ## Comment 2 — Deduplication
-**What I did:**
-**How I verified:**
+**What I did:** Added a duplicate check in `add_to_watchlist()` that looks for an existing watchlist entry with the same `user_id` and `film_id`. If one exists, the service raises `AlreadyInWatchlistError`. I also updated the route to return a 409 Conflict response when that exception is raised.
+
+**How I verified:** Ran the full test suite with `pytest tests/ -v` and confirmed all tests passed. I also verified the duplicate-check pattern matches the existing implementation in `add_to_collection()`.
 
 ## Comment 3 — Missing test
 **What I did:**
