@@ -28,9 +28,11 @@
 **Engagement with reviewer's point:** Recently added movies are not highlighted.
 
 ## Comment 6 — Rebase
-**What conflicted:**
-**How I resolved it:**
-**How I verified no conflict remains:**
+**What conflicted:** No conflicts occurred during the rebase. The branch was already compatible with the UUID refactor from main.
+
+**How I resolved it:** Fetched the latest changes from origin and rebased `feature/watchlist` onto `origin/main` using `git rebase origin/main`.
+
+**How I verified no conflict remains:** Confirmed the rebase completed successfully and checked the branch history to verify there were no merge commits.
 
 ## PR Description
 <!-- Written at the end — feature overview, design decisions, manual testing steps -->
