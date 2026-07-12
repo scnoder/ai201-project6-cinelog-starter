@@ -13,8 +13,9 @@
 **How I verified:** Ran the full test suite with `pytest tests/ -v` and confirmed all tests passed. I also verified the duplicate-check pattern matches the existing implementation in `add_to_collection()`.
 
 ## Comment 3 — Missing test
-**What I did:**
-**How I verified:**
+**What I did:** Created `tests/test_watchlist.py` and added a test for attempting to add a film that does not exist. I modeled the test after `test_add_to_collection_nonexistent_film_raises` so the watchlist tests follow the same fixture and assertion pattern as the existing collection tests.
+
+**How I verified:** Ran `pytest tests/test_watchlist.py -v` and `pytest tests/ -v`. All tests passed.
 
 ## Comment 4 — Default visibility
 **My position:**
