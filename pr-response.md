@@ -35,4 +35,37 @@
 **How I verified no conflict remains:** Confirmed the rebase completed successfully and checked the branch history to verify there were no merge commits.
 
 ## PR Description
-<!-- Written at the end — feature overview, design decisions, manual testing steps -->
+### Watchlist Feature Overview
+
+This PR adds a watchlist feature to CineLog, allowing users to save films they want to watch later. The feature is separate from the existing collection system, which tracks films users have already watched and rated.
+
+The watchlist feature includes:
+
+- A `WatchlistEntry` model that connects users with films and stores when a film was added.
+- A watchlist service that supports adding films and retrieving a user's watchlist.
+- API endpoints for:
+  - `GET /watchlist/<user_id>` — retrieve a user's watchlist
+  - `POST /watchlist/<user_id>/add` — add a film to a user's watchlist
+- Validation for missing film IDs and nonexistent films.
+- Duplicate prevention so the same user cannot add the same film multiple times.
+
+### Design Decisions
+
+#### Default Visibility
+
+The watchlist defaults to public visibility (`public=True`). CineLog is a community-focused app, and a public watchlist encourages users to share recommendations and discover films through other users' interests. The tradeoff is that some users may prefer privacy, so the endpoint supports explicitly setting visibility when adding an entry.
+
+#### Sort Order
+
+The watchlist is sorted by date added, with the newest entries appearing first. This matches how users typically interact with watchlists because they are often checking recently saved films. It also keeps the behavior consistent with the existing collection feature, which already uses newest-first ordering.
+
+### Manual Testing Instructions
+
+1. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+
+
+## Final Commit History
+![alt text](image.png)
